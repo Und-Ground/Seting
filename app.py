@@ -853,6 +853,9 @@ def main():
     if 'session_id' not in st.session_state:
         st.session_state['session_id'] = f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     
+    if 'streaming' not in st.session_state:
+        st.session_state['streaming'] = False
+        
     if 'live_logs' not in st.session_state:
         st.session_state['live_logs'] = []
     
